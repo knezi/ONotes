@@ -1,0 +1,30 @@
+#new_note {
+	padding: 15px;
+	height: 100%;
+}
+
+#new_note textarea {
+	background: none;
+	border: none;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#header input {
+	background: none;
+	border: none;
+	height: 100%;
+	font-size: 1em;
+}
+
+#erase {
+	background: url("../icons/delete.png") no-repeat;
+	width: 80px;
+	height: 80px;
+	display: inline-block;
+	position:fixed;
+	bottom: 0;
+	right: 0;
+}

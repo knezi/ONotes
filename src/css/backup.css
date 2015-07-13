@@ -1,0 +1,42 @@
+#backup {
+	background: #efefeb;
+	text-align: center;
+}
+
+button,select {
+	font-size: 1.2em;
+	text-align: center;
+	width: 70%;
+	border: 1px solid #a6a6a6;
+	background: #d7d7d7;
+	padding: 5px 0;
+	box-shadow: 0px 0px 0.5px #444444;
+}
+
+button:active {
+	background: #a6a6a6;
+}
+
+#backup .entry {
+	border-bottom: 1px solid #dcdcdc;
+	padding: 15px 5px;
+}
+
+#backup .entry span {
+	padding-left: 30px;
+	text-align: left;
+	display: inline-block;
+	padding-bottom: 10px;
+}
+
+#backup ul {
+	margin: 0;
+	padding: 0;
+	display: none;
+}
+
+#backup ul li {
+	list-style: none;
+	padding: 10px 0;
+	border-bottom: 1px solid #dcdcdc;
+}
