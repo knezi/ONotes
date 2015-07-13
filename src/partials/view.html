@@ -1,0 +1,7 @@
+<div ng-repeat="note in notes.notes">
+	<div class="note" ng-class="'c'+note.color" ng-click="clickNote(note)">
+		<span class="head">{{ note.head }}</span>
+		<span ng-class="notes.getLabel(note.color)!=''?'label':''">{{ notes.getLabel(note.color) }}</span>
+		<p>{{ note.text }}</p>
+	</div>
+</div>

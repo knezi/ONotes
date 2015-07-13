@@ -1,0 +1,26 @@
+{
+  "name": "O Notes",
+  "description": "Simple application for storing notes with ability of regular backup and autosaving",
+  "version": "2.0.0",
+  "default_locale": "en",
+  "launch_path": "/index.html",
+  "type": "privileged",
+  "icons": {
+    "60": "/icons/icon_60.png",
+    "128": "/icons/icon_128.png",
+    "32": "/icons/icon_32.png",
+    "90": "/icons/icon_90.png",
+    "120": "/icons/icon_120.png",
+    "256": "/icons/icon_256.png"
+  },
+  "developer": {
+    "name": "Jan Knížek",
+    "url": "http://cv.janknizek.cz"
+  },
+  "permissions": {
+ 	 "device-storage:sdcard": {
+	       "access": "readwrite",
+			"description": "It is needed for backups. If you do not use backup, the app will never ask you for the permission"
+	  }
+  }
+}

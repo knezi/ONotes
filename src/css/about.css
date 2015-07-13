@@ -1,0 +1,11 @@
+#about {
+	background: #efefeb;
+	padding: 0 5px;
+}
+
+#about .entry {
+	border-bottom: 1px solid #dcdcdc;
+	padding: 15px 5px;
+	margin: 0;
+	text-align: center;
+}
