@@ -1,0 +1,27 @@
+.note {
+	border-left: 5px solid;
+	padding: 10px 10px 10px 3px;
+	margin: 4px 0 0 0;
+}
+
+.note .head {
+	font-weight: bold;
+}
+
+.note .label {
+	float: right;
+	text-transform: uppercase;
+	border: 1px dashed;
+	border-color: inherit;
+	padding: 1px;
+	margin: 0;
+}
+
+.note p {
+	margin: 0;
+	padding: 0;
+	font-size: 0.7em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
