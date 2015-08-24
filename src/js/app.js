@@ -134,6 +134,7 @@ var notes={
 					}else{/* no more entries */
 						if(viewscope!=null)
 							viewscope.$apply()
+						this.testBackup() // make backup after loading everything
 					}
 				};
 				/*var os=scope.getOS("readwrite");
@@ -141,7 +142,6 @@ var notes={
 				req = os.add(obj);*/
 			}
 		}
-		this.testBackup()
 	},
 
 	editing: {
