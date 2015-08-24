@@ -126,7 +126,7 @@ var notes={
 			request.onsuccess = function(event) {
 				scope.db = this.result;
 				var os=scope.getOS("readonly");
-				os.openCursor(null, "prev").onsuccess = function(e) {
+				os.openCursor(null).onsuccess = function(e) {
 					var cursor = e.target.result;
 					if (cursor) {
 						scope.notes.push({head:cursor.value.head, text:cursor.value.text, color:cursor.value.color, id:cursor.value.id, time:cursor.value.time})

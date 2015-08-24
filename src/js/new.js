@@ -7,11 +7,11 @@ ONotes.controller('new', ['$scope', function($scope) {
 	height=$(document).height()-50-30-1; // 50px header, 30px padding
 	$("textarea").css({height:height+"px"})
 	width=$("#header").width()-40-30-5; // 40px color, 30px back
-	setTitle("<input type='text' style='width:"+width+"px'>")
+	setTitle("<input type='text' style='width:"+width+"px' placeholder='New note'>")
 	$("#new_note").addClass('c'+notes.editing.color)
 
 	if(notes.editing.head==null)
-		$("#header input").val("New note")
+		$("#header input").val('')
 	else
 		$("#header input").val(notes.editing.head)
 
@@ -52,8 +52,10 @@ ONotes.controller('new', ['$scope', function($scope) {
 
 	$("#header .back").unbind('click')
 		.click(function(){
-		notes.save(true)
-		window.location="#view"
+			notes.editing.head=$("#header input").val() // because of autocorection
+			notes.editing.text=$("textarea").val()
+			notes.save(true)
+			window.location="#view"
 	})
 
 	$("#header .color").unbind('click')
