@@ -50,8 +50,12 @@ function hideDrawer() {
 }
 
 $(document).ready(function(){
-	$("#body").css({height:Math.max($("#moving_body").height(), $(document).height())+"px"})
-	$("#background_body").css({height:Math.max($("#moving_body").height(), $(document).height())+"px"})
+	$("#body").css({height:Math.max($(window).height())+"px"})
+	$("#background_body").css({height:Math.max($(window).height())+"px"})
+	$(window).resize(function() {
+		$("#body").css({height:Math.max($(window).height())+"px"})
+		$("#background_body").css({height:Math.max($(window).height())+"px"})
+	})
 
 	$("#header .menu").click(function() {
 		$("#background_body").css("transform", "translateX(80%)")

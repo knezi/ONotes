@@ -4,11 +4,17 @@ ONotes.controller('new', ['$scope', function($scope) {
 	$("#header .back").show()
 	$("#header .new").hide()
 	$("#header .color").show()
-	height=$(document).height()-50-30-1; // 50px header, 30px padding
-	$("textarea").css({height:height+"px"})
-	width=$("#header").width()-40-30-5; // 40px color, 30px back
-	setTitle("<input type='text' style='width:"+width+"px' placeholder='New note'>")
+	setTitle("<input type='text' placeholder='New note'>")
 	$("#new_note").addClass('c'+notes.editing.color)
+	function setSize() {
+		console.log('Setting size...')
+		height=$(window).height()-50-30-1 // 50px header, 30px padding
+		$("textarea").css({height:height+"px"})
+		width=$("#header").width()-40-30-5 // 40px color, 30px back
+		$("#header input").css('width',width+'px')
+	}
+	$(window).resize(setSize)
+	setSize()
 
 	if(notes.editing.head==null)
 		$("#header input").val('')
