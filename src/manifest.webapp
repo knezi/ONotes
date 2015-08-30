@@ -1,7 +1,7 @@
 {
   "name": "O Notes",
   "description": "Simple application for storing notes with ability of regular backup and autosaving",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "default_locale": "en",
   "launch_path": "/index.html",
   "type": "privileged",
