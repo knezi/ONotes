@@ -132,9 +132,9 @@ var notes={
 						scope.notes.push({head:cursor.value.head, text:cursor.value.text, color:cursor.value.color, id:cursor.value.id, time:cursor.value.time})
 						cursor.continue();
 					}else{/* no more entries */
+						scope.testBackup() // make backup after loading everything
 						if(viewscope!=null)
 							viewscope.$apply()
-						this.testBackup() // make backup after loading everything
 					}
 				};
 				/*var os=scope.getOS("readwrite");
