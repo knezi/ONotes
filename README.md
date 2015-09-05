@@ -42,4 +42,4 @@ Maintainer Jan Knížek
 
 Feel free to drop me a message to <mailto:jk@janknizek.cz>
 
-<http://cv.janknizek.cz>
+<http://janknizek.cz>
