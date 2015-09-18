@@ -130,10 +130,11 @@ var notes={
 			request.onsuccess = function(event) {
 				scope.db = this.result;
 				var os=scope.getOS("readonly");
-				os.openCursor(null).onsuccess = function(e) {
+				os.openCursor(null, 'prev').onsuccess = function(e) {
 					var cursor = e.target.result;
 					if (cursor) {
 						scope.notes.push({head:cursor.value.head, text:cursor.value.text, color:cursor.value.color, id:cursor.value.id, time:cursor.value.time})
+						console.log(cursor.value)
 						cursor.continue();
 					}else{/* no more entries */
 						scope.testBackup() // make backup after loading everything
@@ -311,7 +312,10 @@ var notes={
 									localStorage.setItem('backup', tmp[3])
 									localStorage.setItem('autosave', tmp[5])
 
-									data=JSON.parse(tmp[6])
+									data=JSON.parse(tmp[6]).reverse()
+									if(data.length==0)
+										alert('Succesfully recovered.')
+
 									os=scope.getOS('readwrite')
 
 									function addNext(i) {
@@ -323,6 +327,7 @@ var notes={
 											if(data.length>i+1)
 												addNext(i+1)
 											else{
+												alert('Succesfully recovered.')
 												console.log('restarting...')
 												window.location.reload()
 											}
