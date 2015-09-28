@@ -24,6 +24,9 @@ ONotes.controller('new', ['$scope', function($scope) {
 	lastSave=Date.now()
 	characters=notes.AUTOSAVE_CHAR
 
+	if(notes.editing.new)
+		$("textarea").focus()
+
 	$("textarea").val(notes.editing.text)
 		.unbind('keyup')
 		.keyup(function() {

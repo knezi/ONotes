@@ -162,7 +162,7 @@ var notes={
 	* save Note to the DB and show it
 	*/
 	save: function(updateView=true) {
-		if(this.editing!=null && (this.editing.head!=null || this.editing.text!="")) {
+		if(this.editing!=null && (this.editing.head!="" || this.editing.text!="")) {
 			var os=this.getOS("readwrite");
 			console.log('saving...')
 			if(this.editing.new) {
